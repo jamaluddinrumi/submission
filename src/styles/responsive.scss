@@ -1,0 +1,71 @@
+/* md */
+@media screen and (min-width: 768px) {
+  #restaurants {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nav__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .headline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .headline__content {
+    padding: 16px 32px;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #drawer.nav {
+    display: none;
+    right: 0;
+    width: 320px;
+  }
+
+  .tablet.nav {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav__item {
+    width: fit-content;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+  #restaurants {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .header {
+    min-height: 5rem;
+  }
+
+  footer .nav__item {
+    border-top: none;
+    display: inline-block;
+  }
+}
+
+/* Tampilkanlah minimal width 1000px pada  viewport width >= 1200px. */
+@media screen and (min-width: 1200px) {
+  .hero {
+    min-width: 1000px;
+  }
+}
