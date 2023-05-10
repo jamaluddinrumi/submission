@@ -1,29 +1,29 @@
-import data from './DATA.json';
+import data from './DATA.json'
 
-import './styles/main.scss';
-import './styles/responsive.scss';
+import './styles/main.scss'
+import './styles/responsive.scss'
 
-const menu = document.querySelector('#menu');
-const hero = document.querySelector('.hero');
-const main = document.querySelector('main');
-const drawer = document.querySelector('#drawer');
+const menu = document.querySelector('#menu')
+const hero = document.querySelector('.hero')
+const main = document.querySelector('main')
+const drawer = document.querySelector('#drawer')
 
 menu.addEventListener('click', function (event) {
-  drawer.classList.toggle('open');
-  event.stopPropagation();
-});
+  drawer.classList.toggle('open')
+  event.stopPropagation()
+})
 
 hero.addEventListener('click', function () {
-  drawer.classList.remove('open');
-});
+  drawer.classList.remove('open')
+})
 
 main.addEventListener('click', function () {
-  drawer.classList.remove('open');
-});
+  drawer.classList.remove('open')
+})
 
-const restaurants = data.restaurants;
+const restaurants = data.restaurants
 
-const restaurantsElement = document.querySelector("#restaurants");
+const restaurantsElement = document.querySelector('#restaurants')
 
 restaurantsElement.innerHTML = restaurants.map((restaurant) => `
 <div class="card bg-base-100 shadow-xl">
@@ -35,4 +35,4 @@ restaurantsElement.innerHTML = restaurants.map((restaurant) => `
     <p class="line-clamp-3">${restaurant.description}</p>
   </div>
 </div>
-`).join("");
+`).join('')
