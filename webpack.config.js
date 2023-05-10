@@ -5,6 +5,9 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
+  experiments: {
+    topLevelAwait: true
+  },
   output: {
     path: path.resolve(__dirname, 'dist')
   },

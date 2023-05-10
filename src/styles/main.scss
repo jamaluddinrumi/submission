@@ -435,6 +435,10 @@ footer .nav__item {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
 
+  a {
+    color: hsl(var(--primary));
+  }
+
   .card {
     position: relative;
     display: flex;
