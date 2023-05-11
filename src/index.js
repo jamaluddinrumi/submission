@@ -7,6 +7,15 @@ const app = new App({
   content: document.querySelector('#main-content > .content')
 })
 
+const skipLink = document.querySelector('#skiptocontent')
+const mainContent = document.querySelector('#maincontent')
+
+skipLink.addEventListener('click', event => {
+  event.preventDefault()
+  mainContent.scrollIntoView({ behavior: 'smooth' })
+  skipLink.blur()
+})
+
 window.addEventListener('hashchange', () => {
   app.renderPage()
 })
