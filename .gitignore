@@ -191,3 +191,5 @@ dist
 
 .DS_Store
 .vscode/
+
+*.pem
