@@ -23,6 +23,26 @@ body {
   overflow-x: hidden;
 }
 
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.font-semibold {
+  font-weight: 500 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
 /*
  * Header
  *
@@ -116,6 +136,8 @@ body {
 
 .nav a:hover {
   background-color: hsla(0, 0%, 0%, 0.1);
+  border-radius: .875rem;
+  color: hsl(var(--primary) / .75)
 }
 
 #drawer.nav {
@@ -476,15 +498,27 @@ footer .nav__item {
   .city {
     position: absolute;
     padding: 1rem 3rem;
-    background-color: wheat;
+    background-color: hsl(39, 77%, 83%);
     margin-top: 2rem;
-    font-weight: bold;
+    border: 1px solid hsl(41, 79%, 85%);
+    border-top-right-radius: 0.875rem;
+    border-bottom-right-radius: 0.875rem;
+  }
+
+  .shadow-sm {
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+
+  .shadow {
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  .shadow-md {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
 
   .shadow-xl {
-    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
-    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   }
 }
 
@@ -522,4 +556,73 @@ section .title {
   outline-color: transparent;
   -webkit-transition: top .1s ease-in;
   transition: top .1s ease-in;
+}
+
+
+#restaurant {
+  .photo {
+    width: 100vw;
+  }
+
+  .card {
+    max-width: 768px;
+    margin: -4rem auto 0;
+    position: relative;
+    padding: 3rem;
+    border-radius: 3rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1rem);
+    border: 1px solid rgba(255, 255, 255, .875);
+  }
+
+  .description,
+  h3,
+  .rating {
+    margin-top: 1.875rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style-image: url('../images/IonIosCheckmarkCircle.svg');
+    margin-left: 1.25rem;
+  }
+
+  ul li {
+    margin-top: .5rem;
+  }
+
+  .menus {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.85rem;
+    margin-bottom: 1.875rem;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .review {
+    margin-top: 1rem;
+
+    .date {
+      font-style: italic;
+      font-size: small;
+    }
+
+    .name {
+      margin-top: .25rem;
+    }
+
+    .content {
+      margin-top: .4rem;
+    }
+  }
+
+  .address {
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+  }
 }

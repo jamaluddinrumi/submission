@@ -17,10 +17,10 @@ const Index = {
         <a href="/#/detail/${restaurant.id}">
           <figure><img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="Shoes" /></figure>
         </a>
-        <div class="city">${restaurant.city}</div>
+        <div class="city font-semibold shadow-md">${restaurant.city}</div>
         <div class="card-body">
           <div class="rating">
-            Rating: ${restaurant.rating}
+            <span class="font-semibold">Rating:</span> ${restaurant.rating}
           </div>
           <a href="/#/detail/${restaurant.id}">
             <h2 class="card-title">${restaurant.name}</h2>
