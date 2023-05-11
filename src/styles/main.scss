@@ -222,7 +222,7 @@ body {
   min-height: 380px;
   width: 100vw;
   text-align: center;
-  background-image: url("../images/resto.jpg");
+  background-image: url("../images/hero-image_2.jpg");
   background-position: center;
   background-color: hsl(var(--primary));
 
@@ -491,10 +491,6 @@ footer .nav__item {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
 
-  a {
-    color: hsl(var(--primary));
-  }
-
   .card {
     position: relative;
     display: flex;
@@ -527,6 +523,23 @@ footer .nav__item {
     flex-direction: column;
     padding: var(--padding-card, 2rem);
     gap: .5rem;
+
+
+    a {
+      width: fit-content;
+
+      .card-title {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-block;
+        padding: 0.5rem 0;
+        color: hsl(var(--primary));
+      }
+
+      .card-title:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .city {
