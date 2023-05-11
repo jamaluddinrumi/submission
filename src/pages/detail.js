@@ -1,9 +1,12 @@
 import UrlParser from '../utils/url-parser'
+import LikeButtonInitiator from '../utils/like'
 
 const Detail = {
   async render () {
     return `
-      <div id="restaurant"><div class="placeholder animation-spin"></div></div>
+      <div id="restaurant">
+        <div class="placeholder animation-spin"></div>
+      </div>
     `
   },
 
@@ -42,10 +45,15 @@ const Detail = {
         <div class="rating">
           <span class="font-semibold">Rating:</span> ${restaurant.rating}
         </div>
-        <h1 class="mb-2">${restaurant.name}</h3>
-        <div class="address">
-          <img class="icon-maps" src="/images/IonIosLocation.svg" />
-          <address>${restaurant.address}</address>
+        <div class="header">
+          <div>
+            <h1 class="mb-2">${restaurant.name}</h3>
+            <div class="address">
+              <img class="icon-maps" src="/images/IonIosLocation.svg" />
+              <address>${restaurant.address}</address>
+            </div>
+          </div>
+          <div id="likeButtonContainer"></div>
         </div>
         <p class="description">${restaurant.description}</p>
         <div class="menus">
@@ -62,6 +70,11 @@ const Detail = {
         <div class="reviews">${renderReviews(restaurant.customerReviews)}</div>
       </div>
     `
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant
+    })
   }
 }
 
