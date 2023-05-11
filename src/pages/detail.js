@@ -14,7 +14,6 @@ const Detail = {
     const result = await fetch(`https://restaurant-api.dicoding.dev/detail/${url.id}`)
     const resultJson = await result.json()
     const restaurant = await resultJson.restaurant
-    console.log(restaurant)
 
     const titleElement = document.querySelector('h2.title')
     titleElement.textContent = restaurant.name

@@ -4,6 +4,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  #restaurant {
+    .card {
+      margin: -4rem 4rem 0;
+    }
+  }
+
   .nav__list {
     max-width: 800px;
     margin: 0 auto;
@@ -51,6 +57,12 @@
 @media screen and (min-width: 1024px) {
   #restaurants {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #restaurant {
+    .card {
+      margin: -4rem auto 0;
+    }
   }
 
   .header {
