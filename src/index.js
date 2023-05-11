@@ -1,6 +1,7 @@
 import './styles/main.scss'
 import './styles/responsive.scss'
 import App from './app'
+import swRegister from './utils/sw-register'
 
 const app = new App({
   content: document.querySelector('#main-content > .content')
@@ -12,6 +13,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage()
+  swRegister()
 })
 
 const menu = document.querySelector('#menu')

@@ -9,3 +9,7 @@ export const createLikedButtonTemplate = () => `
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `
+
+export const emptyFavorite = () => `
+  <h3 class="mx-auto">😭 kamu belum ngelike!</h3>
+`

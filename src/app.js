@@ -12,9 +12,7 @@ class App {
     const page = routes[url]
     const hero = document.querySelector('#hero') ?? null
     if (hero !== null) {
-      if (url === '/') {
-        hero.innerHTML = Hero
-      } else hero.innerHTML = ''
+      hero.innerHTML = url === '/' ? Hero : ''
     }
     this._content.innerHTML = await page.render()
     await page.afterRender()

@@ -1,4 +1,5 @@
 import FavoriteRestaurantIdb from '../utils/db'
+import { emptyFavorite } from '../template'
 
 const Index = {
   async render () {
@@ -14,12 +15,15 @@ const Index = {
 
   async afterRender () {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants()
+    console.log('length', restaurants.length)
 
     const pageTitleElement = document.querySelector('h2.title')
     const restaurantsElement = document.querySelector('#restaurants')
 
     pageTitleElement.textContent = 'Favorite'
-    restaurantsElement.innerHTML = restaurants.map((restaurant) => `
+    restaurantsElement.innerHTML = restaurants.length === 0
+      ? emptyFavorite()
+      : restaurants.map((restaurant) => `
       <div class="card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
           <figure><img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="Shoes" /></figure>
