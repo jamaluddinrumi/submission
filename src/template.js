@@ -11,5 +11,7 @@ export const createLikedButtonTemplate = () => `
 `
 
 export const emptyFavorite = () => `
+  <div></div>
   <h3 class="mx-auto">😭 kamu belum ngelike!</h3>
+  <div></div>
 `
