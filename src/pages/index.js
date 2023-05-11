@@ -1,7 +1,12 @@
 const Index = {
   async render () {
     return `
-      <h2 class="title">Explore Restaurants</h2><div id="restaurants"></div>
+      <h2 class="title"></h2>
+      <div id="restaurants">
+        <div></div>
+        <div class="placeholder"></div>
+        <div></div>
+      </div>
     `
   },
 
@@ -10,8 +15,10 @@ const Index = {
     const resultJson = await result.json()
     const restaurants = await resultJson.restaurants
 
+    const pageTitleElement = document.querySelector('h2.title')
     const restaurantsElement = document.querySelector('#restaurants')
 
+    pageTitleElement.textContent = 'Explore Restaurants'
     restaurantsElement.innerHTML = restaurants.map((restaurant) => `
       <div class="card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">

@@ -3,7 +3,7 @@ import UrlParser from '../utils/url-parser'
 const Detail = {
   async render () {
     return `
-      <div id="restaurant"></div>
+      <div id="restaurant"><div class="placeholder animation-spin"></div></div>
     `
   },
 
