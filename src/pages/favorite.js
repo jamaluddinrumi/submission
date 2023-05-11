@@ -15,7 +15,6 @@ const Index = {
 
   async afterRender () {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants()
-    console.log('length', restaurants.length)
 
     const pageTitleElement = document.querySelector('h2.title')
     const restaurantsElement = document.querySelector('#restaurants')
