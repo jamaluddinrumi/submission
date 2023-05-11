@@ -18,6 +18,11 @@ const menu = document.querySelector('#menu')
 const hero = document.querySelector('.hero') ?? null
 const main = document.querySelector('main')
 const drawer = document.querySelector('#drawer')
+const navLinks = document.querySelectorAll('nav a')
+
+navLinks.forEach((navLink) => navLink.addEventListener('click', () => {
+  drawer.classList.remove('open')
+}))
 
 menu.addEventListener('click', function (event) {
   drawer.classList.toggle('open')
