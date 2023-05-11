@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
 })
 
 const menu = document.querySelector('#menu')
-const hero = document.querySelector('.hero')
+const hero = document.querySelector('.hero') ?? null
 const main = document.querySelector('main')
 const drawer = document.querySelector('#drawer')
 
@@ -24,9 +24,11 @@ menu.addEventListener('click', function (event) {
   event.stopPropagation()
 })
 
-hero.addEventListener('click', function () {
-  drawer.classList.remove('open')
-})
+if (hero !== null) {
+  hero.addEventListener('click', function () {
+    drawer.classList.remove('open')
+  })
+}
 
 main.addEventListener('click', function () {
   drawer.classList.remove('open')

@@ -3,7 +3,6 @@ import UrlParser from '../utils/url-parser'
 const Detail = {
   async render () {
     return `
-      <h2 class="title">Restaurant Detail</h2>
       <div id="restaurant"></div>
     `
   },
@@ -14,9 +13,6 @@ const Detail = {
     const result = await fetch(`https://restaurant-api.dicoding.dev/detail/${url.id}`)
     const resultJson = await result.json()
     const restaurant = await resultJson.restaurant
-
-    const titleElement = document.querySelector('h2.title')
-    titleElement.textContent = restaurant.name
 
     const renderReviews = (reviews) => {
       return reviews.map((review) =>
@@ -46,7 +42,7 @@ const Detail = {
         <div class="rating">
           <span class="font-semibold">Rating:</span> ${restaurant.rating}
         </div>
-        <h3 class="mb-2">${restaurant.name}</h3>
+        <h1 class="mb-2">${restaurant.name}</h3>
         <div class="address">
           <img class="icon-maps" src="/images/IonIosLocation.svg" />
           <address>${restaurant.address}</address>
@@ -54,15 +50,15 @@ const Detail = {
         <p class="description">${restaurant.description}</p>
         <div class="menus">
           <div>
-            <h4>Foods</h4>
+            <h2>Foods</h2>
             <ul class="foods">${renderMenus(restaurant.menus.foods)}</ul>
           </div>
           <div>
-            <h4>Drinks</h4>
+            <h2>Drinks</h2>
             <ul class="drinks">${renderMenus(restaurant.menus.drinks)}</ul>
           </div>
         </div>
-        <h4>Reviews</h4>
+        <h2>Reviews</h2>
         <div class="reviews">${renderReviews(restaurant.customerReviews)}</div>
       </div>
     `
