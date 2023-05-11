@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
   experiments: {
@@ -54,21 +54,21 @@ module.exports = {
     new FaviconsWebpackPlugin({
       logo: path.resolve(__dirname, 'src/images/dicoding.jpeg')
     }),
-    new CleanWebpackPlugin()
-    // new WorkboxWebpackPlugin.GenerateSW({
-    //   swDest: './sw.bundle.js',
-    //   runtimeCaching: [
-    //     {
-    //       urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
-    //       handler: 'StaleWhileRevalidate',
-    //       options: {
-    //         cacheName: 'GANTI_DENGAN_NAMA_CACHE_MU',
-    //         cacheableResponse: {
-    //           statuses: [200]
-    //         }
-    //       }
-    //     }
-    //   ]
-    // })
+    new CleanWebpackPlugin(),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'dicoding-api-cache',
+            cacheableResponse: {
+              statuses: [200]
+            }
+          }
+        }
+      ]
+    })
   ]
 }

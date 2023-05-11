@@ -8,7 +8,7 @@ const app = new App({
 })
 
 const skipLink = document.querySelector('#skiptocontent')
-const mainContent = document.querySelector('#maincontent')
+const mainContent = document.querySelector('#main-content')
 
 skipLink.addEventListener('click', event => {
   event.preventDefault()

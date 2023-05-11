@@ -49,7 +49,7 @@ const Detail = {
           <div>
             <h1 class="mb-2">${restaurant.name}</h3>
             <div class="address">
-              <img class="icon-maps" src="/images/IonIosLocation.svg" />
+              <img class="icon-maps" src="/images/IonIosLocation.svg" alt="pin location icon" />
               <address>${restaurant.address}</address>
             </div>
           </div>

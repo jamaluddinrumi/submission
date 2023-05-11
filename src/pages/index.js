@@ -22,7 +22,7 @@ const Index = {
     restaurantsElement.innerHTML = restaurants.map((restaurant) => `
       <div class="card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
-          <figure><img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="Shoes" /></figure>
+          <figure><img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" /></figure>
         </a>
         <div class="city font-semibold shadow-md">${restaurant.city}</div>
         <div class="card-body">

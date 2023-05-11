@@ -91,22 +91,29 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-block;
+
+    .header__title {
+      font-weight: 900;
+      font-size: 2.4rem;
+      display: inline-block;
+      color: hsl(var(--primary));
+      letter-spacing: -.0875rem;
+    }
+  }
 }
 
-.header__title {
-  font-weight: 900;
-  font-size: 4em;
-  margin: 0.5em 0.25em;
-  display: inline-block;
-  color: hsl(var(--primary));
-}
 
 .header__menu {
   font-size: 32px;
   margin: 10px auto;
   display: block;
-  min-width: 45px;
-  min-height: 45px;
+  min-width: 44px;
+  min-height: 44px;
   text-align: center;
   color: hsl(var(--primary));
   border: none;
@@ -302,8 +309,8 @@ main {
 }
 
 .headline__button {
-  min-height: 45px;
-  min-width: 45px;
+  min-height: 44px;
+  min-width: 44px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   margin-top: 24px;
