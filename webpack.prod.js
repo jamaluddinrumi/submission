@@ -10,7 +10,7 @@ module.exports = merge(common, {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
+          urlPattern: ({ request, url }) => url.origin === 'https://restaurant-api.dicoding.dev',
           handler: 'NetworkFirst',
           options: {
             cacheName: 'dicoding-api-cache',
