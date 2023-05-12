@@ -39,7 +39,7 @@ const Detail = {
     const restaurantElement = document.querySelector('#restaurant')
     restaurantElement.innerHTML = `
       <figure>
-        <img class="photo" src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" />
+        <img class="photo" src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
       </figure>
       <div class="card">
         <div class="rating">
@@ -49,7 +49,7 @@ const Detail = {
           <div>
             <h1 class="mb-2">${restaurant.name}</h3>
             <div class="address">
-              <img class="icon-maps" src="/images/IonIosLocation.svg" alt="pin location icon" />
+              <img class="icon-maps" src="/images/IonIosLocation.svg" alt="pin location icon" crossorigin="anonymous" />
               <address>${restaurant.address}</address>
             </div>
           </div>
