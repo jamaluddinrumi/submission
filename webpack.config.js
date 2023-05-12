@@ -57,7 +57,7 @@ module.exports = {
       ]
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'src/images/dicoding.jpeg')
+      logo: path.resolve(__dirname, 'src/images/favicon-512x512.png')
     }),
     new CleanWebpackPlugin(),
     new WorkboxWebpackPlugin.GenerateSW({
