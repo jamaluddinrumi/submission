@@ -2,8 +2,6 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
   experiments: {
@@ -58,22 +56,6 @@ module.exports = {
     }),
     new FaviconsWebpackPlugin({
       logo: path.resolve(__dirname, 'src/images/favicon-512x512.png')
-    }),
-    new CleanWebpackPlugin(),
-    new WorkboxWebpackPlugin.GenerateSW({
-      swDest: './sw.bundle.js',
-      runtimeCaching: [
-        {
-          urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'dicoding-api-cache',
-            cacheableResponse: {
-              statuses: [200]
-            }
-          }
-        }
-      ]
     })
   ]
 }
