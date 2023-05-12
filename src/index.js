@@ -7,7 +7,7 @@ const app = new App({
   content: document.querySelector('#main-content > .content')
 })
 
-const skipLink = document.querySelector('#skiptocontent')
+const skipLink = document.querySelector('#skiptocontent a')
 const mainContent = document.querySelector('#main-content')
 
 skipLink.addEventListener('click', event => {
