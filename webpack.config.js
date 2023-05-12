@@ -65,7 +65,7 @@ module.exports = {
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
-          handler: 'NetworkFirst',
+          handler: 'StaleWhileRevalidate',
           options: {
             cacheName: 'dicoding-api-cache',
             cacheableResponse: {
