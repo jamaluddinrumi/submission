@@ -11,7 +11,7 @@ module.exports = merge(common, {
       runtimeCaching: [
         {
           urlPattern: /^https:\/\/restaurant-api.dicoding.dev\//,
-          handler: 'StaleWhileRevalidate',
+          handler: 'NetworkFirst',
           options: {
             cacheName: 'dicoding-api-cache',
             cacheableResponse: {
