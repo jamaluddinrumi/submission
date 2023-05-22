@@ -71,8 +71,10 @@ const Detail = {
       </div>
     `
 
+    const likeButtonContainer = document.querySelector('#likeButtonContainer')
+
     LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      likeButtonContainer,
       restaurant
     })
   }
