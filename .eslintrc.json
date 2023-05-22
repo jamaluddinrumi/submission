@@ -5,7 +5,7 @@
         "node": true,
         "jasmine": true
     },
-    "extends": "standard",
+    "extends": ["standard", "plugin:codeceptjs/recommended"],
     "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",

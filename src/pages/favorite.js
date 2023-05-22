@@ -5,7 +5,7 @@ const Index = {
   async render () {
     return `
       <h2 class="title"></h2>
-      <div id="restaurants">
+      <div id="restaurants" class="favorites">
         <div></div>
         <div class="placeholder"></div>
         <div></div>
@@ -23,7 +23,7 @@ const Index = {
     restaurantsElement.innerHTML = restaurants.length === 0
       ? emptyFavorite()
       : restaurants.map((restaurant) => `
-      <div class="card bg-base-100 shadow-xl">
+      <div class="restaurant card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
           <figure>
             <img src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
