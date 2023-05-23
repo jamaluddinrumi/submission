@@ -223,16 +223,8 @@ body {
  * Jumbotron
  */
 
-.hero {
-  display: flex;
-  align-items: center;
-  min-height: 380px;
+#hero {
   width: 100vw;
-  text-align: center;
-  background-image: url("../images/hero-image_2.jpg");
-  background-position: center;
-  background-color: hsl(var(--primary));
-
   overflow-x: hidden;
 }
 

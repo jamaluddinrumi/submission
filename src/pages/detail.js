@@ -38,9 +38,11 @@ const Detail = {
 
     const restaurantElement = document.querySelector('#restaurant')
     restaurantElement.innerHTML = `
-      <figure>
-        <img class="photo" src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
-      </figure>
+    <picture>
+      <source media="(max-width: 300px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
+      <source media="(max-width: 600px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" />
+      <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+    </picture>
       <div class="card">
         <div class="rating">
           <span class="font-semibold">Rating:</span> ${restaurant.rating}

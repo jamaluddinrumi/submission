@@ -1,10 +1,8 @@
 const Hero = `
-<div class="hero">
-    <div class="hero__inner">
-      <h1 class="hero__title">Portal Resto</h1>
-      <p class="hero__tagline">La Vermesto Ala Capulgi, <br /> Cari Resto ya di SambiLegi!</p>
-    </div>
-  </div>
+<picture>
+  <source media="(max-width: 768px)" srcset="./images/hero-image_2-small.jpg" />
+  <img class="hero__image" src="./images/hero-image_2-large.jpg" alt="" />
+</picture>
 `
 
 export default Hero
