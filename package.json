@@ -4,12 +4,14 @@
   "description": "SambiLegi Portal Resto",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack serve --host 0.0.0.0 --port 9000 --mode=development --config webpack.dev.js",
-    "build": "webpack --mode=production --config webpack.prod.js",
-    "serve": "http-server dist --ssl --C ../127.0.0.1+7.pem -K ../127.0.0.1+7-key.pem ",
+    "start-dev": "pnpm build-image dev && webpack serve --host 0.0.0.0 --port 9000 --mode=development --config webpack.dev.js",
+    "build": "pnpm build-image prod && webpack --mode=production --config webpack.prod.js",
+    "serve": "http-server dist",
+    "serve-https": "http-server dist --ssl --C ../127.0.0.1+7.pem -K ../127.0.0.1+7-key.pem",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "build-serve": "pnpm build && pnpm serve",
+    "build-serve-https": "pnpm build && pnpm serve-https",
     "test": "karma start",
     "e2e": "codeceptjs run",
     "build-image": "node sharp.js"

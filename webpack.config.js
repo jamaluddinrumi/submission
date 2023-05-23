@@ -47,16 +47,20 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
+          from: path.resolve(__dirname, 'src/icons/'),
+          to: path.resolve(__dirname, 'dist/icons/')
+        },
+        {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/**']
+            ignore: '**/images/**'
           }
         }
       ]
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'src/images/favicon-512x512.png')
+      logo: path.resolve(__dirname, 'src/public/favicon-512x512.png')
     }),
     new ImageminWebpackPlugin({
       plugins: [

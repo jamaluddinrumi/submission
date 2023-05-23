@@ -39,9 +39,9 @@ const Detail = {
     const restaurantElement = document.querySelector('#restaurant')
     restaurantElement.innerHTML = `
     <picture>
-      <source media="(max-width: 300px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
-      <source media="(max-width: 600px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" />
-      <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+      <source media="(max-width: 415px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
+      <source media="(max-width: 1024px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" />
+      <img class="lazyload w-full" src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
     </picture>
       <div class="card">
         <div class="rating">
@@ -51,7 +51,7 @@ const Detail = {
           <div>
             <h1 class="mb-2">${restaurant.name}</h3>
             <div class="address">
-              <img class="icon-maps" src="/images/IonIosLocation.svg" alt="pin location icon" crossorigin="anonymous" />
+              <img class="icon-maps" src="/icons/IonIosLocation.svg" alt="pin location icon" crossorigin="anonymous" />
               <address>${restaurant.address}</address>
             </div>
           </div>

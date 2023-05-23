@@ -22,11 +22,10 @@ const Index = {
     restaurantsElement.innerHTML = restaurants.map((restaurant) => `
       <div class="restaurant card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
-        <picture>
+        <figure>
           <source media="(max-width: 300px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
-          <source media="(max-width: 600px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" />
           <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
-        </picture>
+        </figure>
         </a>
         <div class="city font-semibold shadow-md">${restaurant.city}</div>
         <div class="card-body">

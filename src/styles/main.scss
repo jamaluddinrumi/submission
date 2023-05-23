@@ -43,6 +43,10 @@ body {
   margin-bottom: 0.25rem !important;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem !important;
 }
@@ -497,15 +501,16 @@ footer .nav__item {
     border-radius: var(--rounded-box, 1rem);
   }
 
-  .card figure {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card figure img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+  .card {
+      figure, picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+      }
+    }
   }
 
   .card :where(figure:first-child) {
@@ -618,7 +623,7 @@ section .title {
   }
 
   ul {
-    list-style-image: url('../images/IonIosCheckmarkCircle.svg');
+    list-style-image: url('../icons/IonIosCheckmarkCircle.svg');
     margin-left: 1.25rem;
   }
 
@@ -663,7 +668,7 @@ section .title {
 }
 
 .placeholder {
-  background-image: url('../images/SvgSpinners8DotsRotate.svg');
+  background-image: url('../icons/SvgSpinners8DotsRotate.svg');
   width: 120px;
   height: 120px;
   margin: 0 auto;
