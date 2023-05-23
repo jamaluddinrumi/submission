@@ -7,6 +7,10 @@ const destinationPath = process.argv[2] === 'prod' ? 'dist' : 'public'
 const target = path.resolve(__dirname, 'src/images')
 const destination = path.resolve(__dirname, `${destinationPath}/images`)
 
+if (!fs.existsSync(destinationPath)) {
+  fs.mkdirSync(destinationPath)
+}
+
 if (!fs.existsSync(destination)) {
   fs.mkdirSync(destination)
 }
