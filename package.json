@@ -41,7 +41,6 @@
     "karma-webpack": "^5.0.0",
     "sass": "^1.61.0",
     "sass-loader": "^13.2.2",
-    "selenium-standalone": "^8.3.0",
     "style-loader": "^3.3.1",
     "webdriverio": "^8.10.5",
     "webpack": "^5.73.0",
