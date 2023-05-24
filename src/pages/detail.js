@@ -41,7 +41,7 @@ const Detail = {
     <picture>
       <source media="(max-width: 415px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
       <source media="(max-width: 1024px)" srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" />
-      <img class="lazyload w-full" src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+      <img class="lazyload w-full" data-src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
     </picture>
       <div class="card">
         <div class="rating">

@@ -24,7 +24,7 @@ const Index = {
         <a href="/#/detail/${restaurant.id}">
         <figure>
           <source media="(max-width: 300px)" srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" />
-          <img class="lazyload" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
+          <img class="lazyload" data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" />
         </figure>
         </a>
         <div class="city font-semibold shadow-md">${restaurant.city}</div>
