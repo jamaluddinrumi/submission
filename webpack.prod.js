@@ -1,7 +1,6 @@
 const { merge } = require('webpack-merge')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const common = require('./webpack.config')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,7 +20,6 @@ module.exports = merge(common, {
           }
         }
       ]
-    }),
-    new BundleAnalyzerPlugin()
+    })
   ]
 })
