@@ -167,6 +167,20 @@ body {
   text-transform: uppercase;
 }
 
+.nav__item.has-link-outside-icon {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.icon-url-outside {
+  margin-left: 0.25rem;
+  margin-bottom: 0;
+}
+
 #drawer .nav__item {
   border-top: 1px solid hsl(var(--primary) / .1);
 }
@@ -475,7 +489,6 @@ footer a {
 }
 
 footer .copyright {
-  color: hsl(var(--primary));
   margin-top: 1.5rem;
 }
 
