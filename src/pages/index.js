@@ -25,7 +25,13 @@ const Index = {
         <figure>
           <picture>
             <source data-srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}, 415w" media="(max-width: 415px)" />
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}" class="lazyload" crossorigin="anonymous" />
+            <img 
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+              data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
+              alt="${restaurant.name}" 
+              class="lazyload" 
+              crossorigin="anonymous" 
+            />
           </picture>
         </figure>
         </a>
