@@ -1,7 +1,11 @@
 const Hero = `
 <picture>
-  <source media="(max-width: 768px)" srcset="./images/hero-image_2-small.jpg" />
-  <img class="hero__image" src="./images/hero-image_2-large.jpg" alt="" />
+  <source srcset="./images/hero-image_2-small.jpg" media="(max-width: 415px)" />
+  <img
+    src="./images/hero-image_2-large.jpg" 
+    alt="hero image" 
+    class="hero__image" 
+  />
 </picture>
 `
 
