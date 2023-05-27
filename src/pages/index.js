@@ -22,15 +22,29 @@ const Index = {
     restaurantsElement.innerHTML = restaurants.map((restaurant) => `
       <div class="restaurant card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
-        <figure>
-          <img 
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-            data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" 
-            alt="${restaurant.name}" 
-            class="lazyload" 
-            crossorigin="anonymous" 
-          />
-        </figure>
+          <figure>
+            <picture>
+              <source 
+                srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId} 639w" 
+                media="(max-width: 639px)" 
+              />
+              <source 
+                srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId} 767w" 
+                media="(max-width: 767px)" 
+              />
+              <source 
+                srcset="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId} 768w" 
+                media="(min-width: 768px)" 
+              />
+              <img 
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+                data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
+                alt="${restaurant.name}" 
+                class="lazyload" 
+                crossorigin="anonymous" 
+              />
+            </picture>
+          </figure>
         </a>
         <div class="city font-semibold shadow-md">${restaurant.city}</div>
         <div class="card-body">
