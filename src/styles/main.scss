@@ -706,3 +706,8 @@ section .title {
 .like.liked {
   background-color: #BF1722;
 }
+
+.hero__image {
+  width: 100%;
+  object-fit: cover;
+}

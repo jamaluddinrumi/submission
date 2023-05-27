@@ -1,6 +1,6 @@
 const Hero = `
 <picture>
-  <source srcset="./images/hero-image_2-small.jpg" media="(max-width: 415px)" />
+  <source srcset="./images/hero-image_2-small.jpg" media="(max-width: 767px)" />
   <img
     src="./images/hero-image_2-large.jpg" 
     alt="hero image" 
