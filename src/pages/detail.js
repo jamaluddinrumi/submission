@@ -37,55 +37,53 @@ const Detail = {
     }
 
     const restaurantElement = document.querySelector('#restaurant')
+
     restaurantElement.innerHTML = `
-    <picture>
-      <source 
-        srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" 
-        media="(max-width: 639px)" 
-      />
-      <source 
-        srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
-        media="(max-width: 767px)" 
-      />
-      <source 
-        srcset="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 
-        media="(min-width: 768px)" 
-      />
-      <img 
-        src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 
-        alt="${restaurant.name}" 
-        class="w-full" 
-        crossorigin="anonymous" 
-      />
-    </picture>
-      <div class="card">
-        <div class="rating">
-          <span class="font-semibold">Rating:</span> ${restaurant.rating}
-        </div>
-        <div class="header">
-          <div>
-            <h1 class="mb-2">${restaurant.name}</h3>
-            <div class="address">
-              <img class="icon-maps" src="/icons/IonIosLocation.svg" alt="pin location icon" />
-              <address>${restaurant.address}</address>
-            </div>
-          </div>
-          <div id="likeButtonContainer"></div>
-        </div>
-        <p class="description">${restaurant.description}</p>
-        <div class="menus">
-          <div>
-            <h2>Foods</h2>
-            <ul class="foods">${renderMenus(restaurant.menus.foods)}</ul>
-          </div>
-          <div>
-            <h2>Drinks</h2>
-            <ul class="drinks">${renderMenus(restaurant.menus.drinks)}</ul>
-          </div>
-        </div>
-        <h2>Reviews</h2>
-        <div class="reviews">${renderReviews(restaurant.customerReviews)}</div>
+    <div class="hero-detail">
+      <picture>
+        <source 
+          srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" 
+          media="(max-width: 767px)" 
+        />
+        <source 
+          srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
+          media="(max-width: 1200px)" 
+        />
+        <img 
+          src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 
+          alt="${restaurant.name}" 
+          crossorigin="anonymous" 
+        />
+      </picture>
+    </div>
+    <div class="card">
+      <div class="rating">
+        <span class="font-semibold">Rating:</span> ${restaurant.rating}
       </div>
+      <div class="header">
+        <div>
+          <h1 class="mb-2">${restaurant.name}</h3>
+          <div class="address">
+            <img class="icon-maps" src="/icons/IonIosLocation.svg" alt="pin location icon" />
+            <address>${restaurant.address}</address>
+          </div>
+        </div>
+        <div id="likeButtonContainer"></div>
+      </div>
+      <p class="description">${restaurant.description}</p>
+      <div class="menus">
+        <div>
+          <h2>Foods</h2>
+          <ul class="foods">${renderMenus(restaurant.menus.foods)}</ul>
+        </div>
+        <div>
+          <h2>Drinks</h2>
+          <ul class="drinks">${renderMenus(restaurant.menus.drinks)}</ul>
+        </div>
+      </div>
+      <h2>Reviews</h2>
+      <div class="reviews">${renderReviews(restaurant.customerReviews)}</div>
+    </div>
     `
 
     const likeButtonContainer = document.querySelector('#likeButtonContainer')
