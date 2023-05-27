@@ -41,11 +41,15 @@ const Detail = {
     <picture>
       <source 
         srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" 
-        media="(max-width: 415px)" 
+        media="(max-width: 767px)" 
       />
       <source 
         srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
-        media="(max-width: 1024px)" 
+        media="(max-width: 1023px)" 
+      />
+      <source 
+        srcset="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 
+        media="(min-width: 1024px)" 
       />
       <img 
         src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 
