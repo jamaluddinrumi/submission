@@ -188,9 +188,11 @@ body {
 .nav a {
   width: 100%;
   display: inline-block;
-  padding: 1rem;
+  padding: 1rem .5rem;
   text-decoration: none;
   color: hsl(var(--primary));
+  min-height: 48px;
+  min-width: 48px;
 }
 
 .nav a:hover {
@@ -638,7 +640,7 @@ section .title {
 
   .menus {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1.85rem;
     margin-bottom: 1.875rem;
@@ -699,7 +701,13 @@ section .title {
   background-color: #BF1722;
 }
 
-.hero__image, .hero-detail img {
+.hero__image,
+.hero-detail img {
   width: 100%;
   object-fit: cover;
+}
+
+footer .nav__item {
+  border-top: none;
+  display: inline-block;
 }

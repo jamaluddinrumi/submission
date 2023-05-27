@@ -1,5 +1,28 @@
+/* xs to sm */
+@media screen and (min-width: 321px) {
+  #restaurant .menus {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  footer .nav__item {
+    width: fit-content;
+  }
+}
+
 /* md */
 @media screen and (min-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .nav__list {
+    gap: .5rem;
+  }
+
+  .nav__item {
+    width: fit-content;
+  }
+
   #restaurants {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -48,15 +71,10 @@
     justify-content: flex-end;
   }
 
-  .nav__item {
-    width: fit-content;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  footer .nav__item {
-    border-top: none;
-    display: inline-block;
+  #restaurants {
+    .placeholder {
+      grid-column: span 2 / span 2;
+    }
   }
 }
 
@@ -64,6 +82,10 @@
 @media screen and (min-width: 1024px) {
   #restaurants {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    .placeholder {
+      grid-column: span 3 / span 3;
+    }
   }
 
   #restaurant {
@@ -82,18 +104,19 @@
   .hero {
     min-width: 1000px;
   }
-  
+
   .hero__image {
     width: fit-content;
     margin: 0 auto;
   }
-  
+
   .hero-detail {
     display: flex;
     justify-content: center;
   }
 
-  .header, #main-content .content {
+  .header,
+  #main-content .content {
     max-width: 1200px;
     margin: 0 auto;
   }

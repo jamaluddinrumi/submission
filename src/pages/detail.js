@@ -5,7 +5,7 @@ const Detail = {
   async render () {
     return `
       <div id="restaurant">
-        <div class="placeholder animation-spin"></div>
+        <div class="placeholder"></div>
       </div>
     `
   },

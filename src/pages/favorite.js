@@ -6,9 +6,7 @@ const Index = {
     return `
       <h2 class="title"></h2>
       <div id="restaurants" class="favorites">
-        <div></div>
         <div class="placeholder"></div>
-        <div></div>
       </div>
     `
   },

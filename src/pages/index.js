@@ -3,9 +3,7 @@ const Index = {
     return `
       <h2 class="title"></h2>
       <div id="restaurants">
-        <div></div>
         <div class="placeholder"></div>
-        <div></div>
       </div>
     `
   },
