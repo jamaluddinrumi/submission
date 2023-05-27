@@ -25,15 +25,15 @@ const Index = {
           <figure>
             <picture>
               <source 
-                srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId} 639w" 
+                data-srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId} 639w" 
                 media="(max-width: 639px)" 
               />
               <source 
-                srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId} 767w" 
+                data-srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId} 767w" 
                 media="(max-width: 767px)" 
               />
               <source 
-                srcset="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId} 768w" 
+                data-srcset="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId} 768w" 
                 media="(min-width: 768px)" 
               />
               <img 
