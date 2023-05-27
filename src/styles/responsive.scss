@@ -53,6 +53,13 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  footer .nav__item {
+    border-top: none;
+    display: inline-block;
+  }
+}
+
 /* lg */
 @media screen and (min-width: 1024px) {
   #restaurants {
@@ -67,11 +74,6 @@
 
   .header {
     min-height: 5rem;
-  }
-
-  footer .nav__item {
-    border-top: none;
-    display: inline-block;
   }
 }
 
