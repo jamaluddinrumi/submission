@@ -100,19 +100,20 @@
 }
 
 @media screen and (max-width: 1200px) {
+
   .hero__image,
   .hero-detail img {
     width: 100%;
     object-fit: cover;
   }
+
+  #restaurants {
+    padding: 1rem;
+  }
 }
 
 /* Tampilkanlah minimal width 1000px pada  viewport width >= 1200px. */
 @media screen and (min-width: 1200px) {
-  #restaurants {
-    padding: 0
-  }
-  
   .hero {
     min-width: 1000px;
   }
