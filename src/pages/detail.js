@@ -47,7 +47,7 @@ const Detail = {
         />
         <source 
           srcset="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
-          media="(max-width: 1200px)" 
+          media="(max-width: 1199px)" 
         />
         <img 
           src="https://restaurant-api.dicoding.dev/images/large/${restaurant.pictureId}" 

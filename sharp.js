@@ -50,4 +50,11 @@ fs.readdirSync(target)
         __dirname,
         `${destination}/${image.split('.').slice(0, -1).join('.')}-1024.jpg`)
       )
+
+    sharp(`${target}/${image}`)
+      .resize(1200)
+      .toFile(path.resolve(
+        __dirname,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-1200.jpg`)
+      )
   })
