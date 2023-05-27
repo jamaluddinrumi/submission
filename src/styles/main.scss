@@ -235,8 +235,6 @@ body {
   color: hsl(var(--primary));
 }
 
-
-
 /*
  * Jumbotron
  */
@@ -244,6 +242,8 @@ body {
 #hero {
   width: 100vw;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .hero__inner {
@@ -512,60 +512,55 @@ footer .nav__item {
     display: flex;
     flex-direction: column;
     border-radius: var(--rounded-box, 1rem);
-  }
 
-  .card {
-      figure, picture {
-      img {
-        width: 100%;
-        overflow-clip-margin: content-box;
-        overflow: clip;
+    figure img {
+      width: 100%;
+    }
+
+    :where(figure:first-child) {
+      overflow: hidden;
+      border-start-start-radius: inherit;
+      border-start-end-radius: inherit;
+      border-end-start-radius: unset;
+      border-end-end-radius: unset;
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      padding: var(--padding-card, 2rem);
+      gap: .5rem;
+
+
+      a {
+        width: fit-content;
+
+        .card-title {
+          min-height: 44px;
+          min-width: 44px;
+          display: inline-block;
+          padding: 0.5rem 0;
+          color: hsl(var(--primary));
+        }
+
+        .card-title:hover {
+          text-decoration: underline;
+        }
       }
+    }
+
+    .city {
+      position: absolute;
+      padding: 1rem 3rem;
+      background-color: hsl(39, 77%, 83%);
+      margin-top: 2rem;
+      border: 1px solid hsl(41, 79%, 85%);
+      border-top-right-radius: 0.875rem;
+      border-bottom-right-radius: 0.875rem;
     }
   }
 
-  .card :where(figure:first-child) {
-    overflow: hidden;
-    border-start-start-radius: inherit;
-    border-start-end-radius: inherit;
-    border-end-start-radius: unset;
-    border-end-end-radius: unset;
-  }
-
-  .card-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    padding: var(--padding-card, 2rem);
-    gap: .5rem;
-
-
-    a {
-      width: fit-content;
-
-      .card-title {
-        min-height: 44px;
-        min-width: 44px;
-        display: inline-block;
-        padding: 0.5rem 0;
-        color: hsl(var(--primary));
-      }
-
-      .card-title:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .city {
-    position: absolute;
-    padding: 1rem 3rem;
-    background-color: hsl(39, 77%, 83%);
-    margin-top: 2rem;
-    border: 1px solid hsl(41, 79%, 85%);
-    border-top-right-radius: 0.875rem;
-    border-bottom-right-radius: 0.875rem;
-  }
 }
 
 .line-clamp-3 {
@@ -708,4 +703,11 @@ section .title {
 .hero__image {
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__image {
+    width:fit-content;
+    margin: 0 auto;
+  }
 }
