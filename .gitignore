@@ -194,3 +194,4 @@ dist
 
 *.pem
 e2e/outputs/
+public/images/
