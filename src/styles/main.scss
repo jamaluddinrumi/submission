@@ -516,10 +516,8 @@ footer .nav__item {
 
   .card {
       figure, picture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       img {
+        width: 100%;
         overflow-clip-margin: content-box;
         overflow: clip;
       }

@@ -23,16 +23,13 @@ const Index = {
       <div class="restaurant card bg-base-100 shadow-xl">
         <a href="/#/detail/${restaurant.id}">
         <figure>
-          <picture>
-            <source data-srcset="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}, 415w" media="(max-width: 415px)" />
-            <img 
-              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
-              data-src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" 
-              alt="${restaurant.name}" 
-              class="lazyload" 
-              crossorigin="anonymous" 
-            />
-          </picture>
+          <img 
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" 
+            data-src="https://restaurant-api.dicoding.dev/images/small/${restaurant.pictureId}" 
+            alt="${restaurant.name}" 
+            class="lazyload" 
+            crossorigin="anonymous" 
+          />
         </figure>
         </a>
         <div class="city font-semibold shadow-md">${restaurant.city}</div>
