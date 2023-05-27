@@ -23,19 +23,31 @@ fs.readdirSync(target)
 
     if (!includeExtension.includes(imageExtension)) return
 
-    // mengubah ukuran gambar dengan lebar 800px, dengan prefix -large.jpg
     sharp(`${target}/${image}`)
-      .resize(1280)
+      .resize(320)
       .toFile(path.resolve(
         __dirname,
-              `${destination}/${image.split('.').slice(0, -1).join('.')}-large.jpg`)
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-320.jpg`)
       )
 
-    // mengubah ukuran gambar dengan lebar 480px, dengan prefix -small.jpg
     sharp(`${target}/${image}`)
-      .resize(480)
+      .resize(640)
       .toFile(path.resolve(
         __dirname,
-              `${destination}/${image.split('.').slice(0, -1).join('.')}-small.jpg`)
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-640.jpg`)
+      )
+
+    sharp(`${target}/${image}`)
+      .resize(768)
+      .toFile(path.resolve(
+        __dirname,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-768.jpg`)
+      )
+
+    sharp(`${target}/${image}`)
+      .resize(1024)
+      .toFile(path.resolve(
+        __dirname,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-1024.jpg`)
       )
   })
