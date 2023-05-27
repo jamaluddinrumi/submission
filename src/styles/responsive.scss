@@ -11,10 +11,6 @@
 
 /* md */
 @media screen and (min-width: 768px) {
-  .header {
-    padding: 1rem;
-  }
-
   .nav__list {
     gap: .5rem;
   }
@@ -114,6 +110,13 @@
 
 /* Tampilkanlah minimal width 1000px pada  viewport width >= 1200px. */
 @media screen and (min-width: 1200px) {
+
+  .header,
+  #main-content .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   .hero {
     min-width: 1000px;
   }
@@ -127,10 +130,11 @@
     display: flex;
     justify-content: center;
   }
+}
 
-  .header,
-  #main-content .content {
-    max-width: 1200px;
-    margin: 0 auto;
+@media screen and (min-width: 1201px) {
+
+  .header {
+    padding: 0;
   }
 }
