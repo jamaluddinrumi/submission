@@ -502,7 +502,6 @@ footer .nav__item {
 
 #restaurants {
   padding: 0 1rem;
-  width: 100vw;
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
@@ -700,14 +699,7 @@ section .title {
   background-color: #BF1722;
 }
 
-.hero__image {
+.hero__image, .hero-detail img {
   width: 100%;
   object-fit: cover;
-}
-
-@media screen and (min-width: 1200px) {
-  .hero__image {
-    width:fit-content;
-    margin: 0 auto;
-  }
 }

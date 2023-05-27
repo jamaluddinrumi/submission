@@ -80,4 +80,19 @@
   .hero {
     min-width: 1000px;
   }
+  
+  .hero__image {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .hero-detail {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header, #main-content .content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
